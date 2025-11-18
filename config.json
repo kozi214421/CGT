@@ -1,0 +1,25 @@
+{
+  "ocr_enabled": true,
+  "confidence_threshold": 0.7,
+  "data_sources": {
+    "stock_act_filings": "https://disclosures-clerk.house.gov",
+    "senate_filings": "https://efdsearch.senate.gov"
+  },
+  "output_format": "json",
+  "output_directory": "output",
+  "validation_rules": {
+    "required_fields": [
+      "official_name",
+      "transaction_date",
+      "security_name",
+      "transaction_type",
+      "amount_range"
+    ],
+    "date_format": "%Y-%m-%d"
+  },
+  "performance_metrics": {
+    "calculate_returns": true,
+    "benchmark_index": "SPY",
+    "time_periods": ["1M", "3M", "6M", "1Y", "lifetime"]
+  }
+}

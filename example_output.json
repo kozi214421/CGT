@@ -1,0 +1,99 @@
+{
+  "report_metadata": {
+    "export_date": "2023-11-18T20:00:00",
+    "report_type": "comprehensive",
+    "data_sources": [
+      "STOCK Act filings",
+      "EIGA disclosures"
+    ]
+  },
+  "aggregate_statistics": {
+    "total_officials": 3,
+    "total_transactions": 12,
+    "average_transactions_per_official": 4.0,
+    "total_estimated_value": 450000.0,
+    "overall_confidence_score": 0.87,
+    "overall_compliance_rate": 0.92,
+    "top_traders": [
+      {
+        "name": "John Smith",
+        "title": "Representative",
+        "chamber": "House",
+        "transaction_count": 5,
+        "estimated_value": 175000.0,
+        "confidence_score": 0.9
+      },
+      {
+        "name": "Jane Doe",
+        "title": "Senator",
+        "chamber": "Senate",
+        "transaction_count": 4,
+        "estimated_value": 150000.0,
+        "confidence_score": 0.85
+      },
+      {
+        "name": "Bob Johnson",
+        "title": "Representative",
+        "chamber": "House",
+        "transaction_count": 3,
+        "estimated_value": 125000.0,
+        "confidence_score": 0.88
+      }
+    ]
+  },
+  "officials": [
+    {
+      "name": "John Smith",
+      "title": "Representative",
+      "chamber": "House",
+      "state": "CA",
+      "party": "Democrat",
+      "transaction_count": 5,
+      "transactions": [
+        {
+          "official_name": "John Smith",
+          "transaction_date": "2023-01-15T00:00:00",
+          "security_name": "Apple Inc.",
+          "ticker_symbol": "AAPL",
+          "transaction_type": "purchase",
+          "amount_range": "$15,001 - $50,000",
+          "filing_date": "2023-02-01T00:00:00",
+          "document_id": "DOC-2023-001",
+          "confidence_score": 0.92,
+          "raw_data": {
+            "source": "House disclosure portal",
+            "filing_type": "PTR"
+          }
+        },
+        {
+          "official_name": "John Smith",
+          "transaction_date": "2023-02-20T00:00:00",
+          "security_name": "Microsoft Corp.",
+          "ticker_symbol": "MSFT",
+          "transaction_type": "sale",
+          "amount_range": "$50,001 - $100,000",
+          "filing_date": "2023-03-05T00:00:00",
+          "document_id": "DOC-2023-002",
+          "confidence_score": 0.89,
+          "raw_data": {
+            "source": "House disclosure portal",
+            "filing_type": "PTR"
+          }
+        }
+      ]
+    }
+  ],
+  "performance_metrics": [
+    {
+      "official_name": "John Smith",
+      "total_transactions": 5,
+      "purchase_count": 3,
+      "sale_count": 2,
+      "total_estimated_value": 175000.0,
+      "average_confidence_score": 0.9,
+      "filing_compliance_rate": 0.95,
+      "data_quality_score": 0.88,
+      "time_period": "lifetime"
+    }
+  ]
+}
