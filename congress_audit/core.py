@@ -85,8 +85,9 @@ def run_audit(
                 )
                 documents.append(doc_data)
                 
-                # In a real implementation, we would extract actual trades here
-                # For now, we'll create sample trade data
+                # Note: In a production implementation, this would parse the document text
+                # to extract actual trade data using regex patterns or NLP.
+                # For demonstration purposes, we create sample trade data.
                 sample_trade = {
                     "symbol": "AAPL",
                     "shares": 100,

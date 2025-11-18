@@ -260,11 +260,8 @@ class TestParseTradingDocument:
             poppler_path="/custom/poppler"
         )
         
-        # Verify poppler_path was passed
-        mock_extract.assert_called_once()
-        call_args = mock_extract.call_args
-        # Check if poppler_path is in the call (either as positional or keyword arg)
-        assert len(call_args[0]) >= 2 or 'poppler_path' in call_args[1]
+        # Verify poppler_path was passed to extract_text_from_pdf
+        mock_extract.assert_called_once_with("/path/to/doc.pdf", "/custom/poppler")
     
     @patch('congress_audit.pdf_utils.extract_text_from_pdf')
     def test_parse_error_handling(self, mock_extract):

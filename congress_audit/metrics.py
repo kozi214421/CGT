@@ -36,10 +36,12 @@ def fetch_stock_price(symbol: str, date: Optional[datetime] = None, max_retries:
                 
                 if not hist.empty:
                     # Get the closest date
-                    closest_idx = hist.index.get_indexer([date], method='nearest')[0]
-                    price = hist.iloc[closest_idx]['Close']
-                    logger.debug(f"Fetched historical price for {symbol} on {date}: ${price:.2f}")
-                    return float(price)
+                    indexer = hist.index.get_indexer([date], method='nearest')
+                    if len(indexer) > 0 and indexer[0] >= 0:
+                        closest_idx = indexer[0]
+                        price = hist.iloc[closest_idx]['Close']
+                        logger.debug(f"Fetched historical price for {symbol} on {date}: ${price:.2f}")
+                        return float(price)
             else:
                 # Get current price
                 info = ticker.info
